@@ -1,4 +1,5 @@
-Hey
-Hope you are doing well
-lets have change
-yes it is true
+import random
+
+my_list=["apple","Banana","kiwi","orange","Mosambi"]
+random_name=random.choice(my_list)
+print(random_name)
