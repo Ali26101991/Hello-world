@@ -38,3 +38,13 @@ while attempt<7:
    
   elif guess > rnum:
        print("please enter bit low number")
+
+# use of random.choice(list)  
+
+import random
+
+my_list=["apple","Banana","kiwi","orange","Mosambi"]
+random_name=random.choice(my_list)
+print(random_name)
+
+
