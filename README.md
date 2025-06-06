@@ -39,6 +39,8 @@ import math
 n=math.nan
 print(n)
 
+# Python also supports positive and negative infinity, represented by float('inf') and float('-inf'), respectively. These are useful in various situations, such as when setting bounds for algorithms or detecting overflow conditions.
+
 x=float('inf')
 y=float('-inf')
 print(x)
