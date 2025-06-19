@@ -176,3 +176,41 @@ map_obj=map(sqr,list1)
 print(list(map_obj))
 
 
+# using single iterabe 'marks'
+
+marks=[60,30,40,50,80]
+'''
+bonus=[1,2,4,5,6]
+bonus=[3,5,6]
+'''
+def logic(arg1):
+    return arg1+1
+
+map_obj=map(logic,marks)
+for i in map_obj:
+    print(i)
+
+##########################################
+# using multiple iterable 'marks' and 'bonus'
+
+marks=[60,30,40,50,80]
+bonus=[1,2,4,5,6]
+def logic(arg1,arg2):
+    return arg1+arg2
+map_obj=map(logic,marks,bonus)
+for i in map_obj:
+    print(i)
+    
+###############################################
+# using 3 iterables 'marks', 'bonus' and 'bonus1
+
+marks=[60,30,40,50,80]
+bonus=[1,2,4,5,6]
+bonus1=[3,5,8]
+def logic(arg1,arg2,arg3):
+    return arg1+arg2+arg3
+map_obj=map(logic,marks,bonus,bonus1)
+for i in map_obj:
+    print(i)
+
+
