@@ -214,3 +214,18 @@ for i in map_obj:
     print(i)
 
 
+# filter() example
+
+laptops={'hp':45000,'lenovo':55000,'asus':80000,'dell':40000}
+budget=float(input("enter your budget:"))
+
+def fir_fun(ele):
+    if laptops[ele]<=budget:
+        return True
+    else:
+        return False
+
+fil_obj=filter(fir_fun,laptops)
+print(list(fil_obj))
+
+
