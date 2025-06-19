@@ -229,3 +229,34 @@ fil_obj=filter(fir_fun,laptops)
 print(list(fil_obj))
 
 
+############ reduce() function ################
+
+
+# writing program with reduce() function, it will ( below it will add two numbers and then result will be added to next number.
+
+import functools
+
+list1=[4,5,6,7,3,5]
+def func(a,b):
+    return a+b
+
+redu_obj=functools.reduce(func,list1)
+print(redu_obj)
+
+
+################ using lambda function
+
+print(functools.reduce(lambda a,b:a+b,[4,5,6,7,3,5]))   
+
+###################### to find max number in list using reduce() function.
+import functools
+list1=[3,6,8,3,5,7]
+def max1(a,b):
+    if a>b:
+        return a
+    else:
+        return b
+    return
+val=functools.reduce(max1,list1)
+print(val)
+
