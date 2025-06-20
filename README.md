@@ -260,3 +260,39 @@ def max1(a,b):
 val=functools.reduce(max1,list1)
 print(val)
 
+# partial() function
+# syntax : partial(func,arg1,arg2.....argn)
+# here first two arg will remain same.
+# lets do below examples
+
+# below example of positional arguments.
+from functools import partial
+def add(n1,n2,n3,n4):
+    return n1+n2+n3+n4
+
+add=partial(add,2,3) # **n1,n2 value remain 2 and 3**
+add(5,4) # passing n3 and n4 values.
+print(add(5,4))
+###########################################
+Below by using keyword arguments.
+
+from functools import partial
+def add(n1,n2,n3,n4):
+    return n1+n2+n3+n4
+
+add=partial(add,n1=2,n2=3) # keyword arguments
+
+print(add(n3=5,n4=4))
+
+
+##############################################
+
+
+
+
+
+
+
+
+
+
