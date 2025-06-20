@@ -50,6 +50,37 @@ def num1(n):
     
 num1(10)
 
+# find factorial of number by using recursion.
+#5!=5*4*3*2*1
+#5*4!
+#5*4*3!=20*3!
+#5*4*3*2!
+#5*4*3*2*1!
+
+def fac(n):
+    if n==0:
+        return 1
+    return n*fac(n-1)
+
+print(fac(5))
+
+###########################################
+#fibonacci series : 0,1,1,2,3,5,8 ( length 7)
+#fib(1)=0
+#fib(2)=1
+#fib(3)=fib(1)+fib(2)=fib(3-2)+fib(3-1)
+#fib(n)=fin(n-2)+fib(n-1)
+
+def fib(n):
+    if n==1:
+        return 0
+    if n==2:
+        return 1
+    return (fib(n-2)+fib(n-1))
+    
+n=int(input("enter the range:"))
+for i in range(1,n+1):
+ print(fib(i))
 
 
 
