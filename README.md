@@ -1,4 +1,7 @@
-Hey
-Hope you are doing well
-lets have change
-yes it is true
+# user defined Class 
+class Email():
+    pass
+
+e1=Email()
+e2=Email()
+print(type(e1))  # <class '__main__.Email'>
