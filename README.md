@@ -181,6 +181,29 @@ print(std1.__dict__)  # {'name': 'ali', 'marks': 80, 'age': 24}
 del std1.age
 print(std1.__dict__)  # {'name': 'ali', 'marks': 80}
 
+###### creating variable using instance method :
+
+
+class Student():
+    def __init__(self,nam,mar):
+        self.name=nam
+        self.marks=mar
+    def display(self):
+        print(f"{self.name} and {self.marks}")
+
+    def change_data(self):  # changing variable.
+        #self.name=input("enter name: ")
+        #self.marks=int(input("enter marks: "))
+         self.name="alok"
+         self.marks=99
+
+
+
+std1=Student("ajay",79)
+std2=Student("ganesh",89)
+
+std1.change_data()
+print(std1.__dict__) # {'name': 'alok', 'marks': 99}
 
 
 
