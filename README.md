@@ -28,3 +28,31 @@ e2=Employee(44000,44)
 print(e1.__dict__)  # {'salary': 23000, 'age': 31}
 print(e2.__dict__)  # {'salary': 44000, 'age': 44}
 
+# Below program depicts how to access attributes (varaible) and method
+# access attribute :  objectname.variable name
+# access method :  objectname.methodname()
+
+class Employee():
+    def __init__(self,sal,ag):
+        self.salary=sal    #  attributes/varaible
+        self.age=ag        #  attributes/varaible
+
+    def display(self):     # method
+        print(f"salary is {self.salary} and age is {self.age}")
+
+e1=Employee(24000,45)  # object1
+e2=Employee(35000,65)  # object2
+
+print(e1.salary) #24000
+print(e1.age)  # 45
+print(e2.salary) # 35000
+print(e2.age) # 65
+e1.display()  #  salary is 24000 and age is 45
+
+
+
+
+
+
+
+
