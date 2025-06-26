@@ -91,10 +91,10 @@ clg2.display()
 
 # To use built in class functions.
 
-getattr(objec_name,'attributename' )
-setattr(objec_name,'attributename','new value')
-delattr(objec_name,'attributename')
-hasattr(objec_name,'attributename) 
+** getattr(objec_name,'attributename' )
+** setattr(objec_name,'attributename','new value')
+** delattr(objec_name,'attributename')
+** hasattr(objec_name,'attributename) 
 
 Example 4: 
 
