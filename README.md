@@ -6,7 +6,7 @@ e1=Email()
 e2=Email()
 print(type(e1))  # <class '__main__.Email'>
 
-# exaple of class with non constructor.
+# exaple of class with non parameterized constructor.
 
 class Employee():
     def __init__(self):   # __init__ is non parameterized constructor.
