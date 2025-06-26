@@ -205,7 +205,19 @@ std2=Student("ganesh",89)
 std1.change_data()
 print(std1.__dict__) # {'name': 'alok', 'marks': 99}
 
+## Class variable and class method
 
+class Employee():
+    company_name="Qualcomm"  # class variable.
+    def __init__(self,sal,ag):
+        self.salary=sal
+        self.age=ag
+
+e1=Employee(20000,44)
+e2=Employee(45000,46)
+print(Employee.company_name) #  Qualcomm
+Employee.company_name="tcs"  # modify class variable.
+print(Employee.company_name)
 
 
 
