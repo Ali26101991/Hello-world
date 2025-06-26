@@ -89,7 +89,33 @@ print(clg1.name)
 clg1.display()
 clg2.display()
 
+# To use built in class functions.
 
+getattr(objec_name,'attributename' )
+setattr(objec_name,'attributename','new value')
+delattr(objec_name,'attributename')
+hasattr(objec_name,'attributename) 
+
+Example 4: 
+
+class Employee():
+    def __init__(self,sal,ag):
+        self.salary=sal
+        self.age=ag
+
+e1=Employee(23000,44)
+e2=Employee(43000,35)
+print(e1.__dict__) # {'salary': 23000, 'age': 44}
+print(e1.salary) # 23000
+print(e1.age) #  44
+print(getattr(e1,"salary")) # 23000
+print(getattr(e1,"age")) # 44
+setattr(e1,'salary','10000') # setting salary to 10000
+print(getattr(e1,"salary")) #  10000
+delattr(e1,"salary") # deleting salary attributte
+print(e1.__dict__)  #  {'age': 44} 
+print(hasattr(e1,'age')) # True -- check presence of age attr
+print(hasattr(e1,'nam')) # False -- check presence of nam attr
 
 
 
