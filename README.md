@@ -70,6 +70,24 @@ print(std1.name)
 std1.display()       # access methods
 std2.display()
 
+Example 3:
+
+# write a program to print college name, rank and city .
+
+class College():
+    def __init__(self,nam,ran,cit):
+        self.name=nam
+        self.rank=ran
+        self.city=cit
+
+    def display(self):
+        print(f"collge name is {self.name},rank is {self.rank} and city is {self.city}")
+clg1=College("rym",1,"hyd")
+clg2=College("BIM",2,"Ban")
+
+print(clg1.name)
+clg1.display()
+clg2.display()
 
 
 
