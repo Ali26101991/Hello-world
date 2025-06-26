@@ -162,3 +162,33 @@ print(isinstance(di2,Demo))    # # False
 print(isinstance(d2,Demo))  # True 
 
 
+# instance variable and class variables.
+
+# instance variable creation outside call function.
+
+class Student():
+    def __init__(self,nm,mar):
+        self.name=nm
+        self.marks=mar
+
+std1=Student("ali",80)
+std2=Student("rahul",70)
+
+print(std1.__dict__)  # {'name': 'ali', 'marks': 80}
+# creating instance variable outside
+std1.age=24
+print(std1.__dict__)  # {'name': 'ali', 'marks': 80, 'age': 24}
+del std1.age
+print(std1.__dict__)  # {'name': 'ali', 'marks': 80}
+
+
+
+
+
+
+
+
+
+
+
+
