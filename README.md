@@ -118,5 +118,27 @@ print(hasattr(e1,'age')) # True -- check presence of age attr
 print(hasattr(e1,'nam')) # False -- check presence of nam attr
 
 
+# Use of built in class attributes : 
+1) __dict__ : dictionary containing class's name space
+2) __doc__ :  class documentation string
+3) __name__ :  class name
+4) __module__ : module name in which class is defined
+5) __bases__ : list of base classes.
+
+class Employee():
+    '''this employee data '''
+    def __init__(self,sal,ag):
+        self.salary=sal
+        self.age=ag
+
+e1=Employee(23000,44)
+e2=Employee(43000,35)
+
+print(Employee.__doc__) # this employee data 
+ 
+print(Employee.__dict__) #{'__module__': '__main__', '__firstlineno__': 1, '__doc__': 'this employee data ', '__init
+print(Employee.__name__) # Employee 
+print(Employee.__module__)  # __main__
+
 
 
