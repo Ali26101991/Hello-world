@@ -140,5 +140,25 @@ print(Employee.__dict__) #{'__module__': '__main__', '__firstlineno__': 1, '__do
 print(Employee.__name__) # Employee 
 print(Employee.__module__)  # __main__
 
+#  isinstance() function
+# syntax : isinstance(obj_name,classname)
+
+class Demo():
+    pass
+
+d1=Demo()
+d2=Demo()
+
+
+class Display():
+    pass
+
+di1=Display()
+di2=Display()
+
+print(isinstance(di1,Display)) # True
+print(isinstance(d2,Display))  # False
+print(isinstance(di2,Demo))    # # False
+print(isinstance(d2,Demo))  # True 
 
 
