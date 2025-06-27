@@ -219,6 +219,23 @@ print(Employee.company_name) #  Qualcomm
 Employee.company_name="tcs"  # modify class variable.
 print(Employee.company_name)  # tcs
 
+# class method ( to access variable.)
+
+class Employee():
+    company_name="infosys"
+    def __init__(self,sal,agg):
+        self.salary=sal
+        self.age=agg
+    @classmethod
+    def get_company_name(cls):
+        print(f"company name is ",cls.company_name)
+
+
+e1=Employee(20000,45)
+e2=Employee(40000,33)
+
+Employee.get_company_name() #  company name is  infosys
+
 
 
 
