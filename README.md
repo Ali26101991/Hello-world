@@ -339,7 +339,43 @@ class Son(Father):
 s1=Son()
 print(s1.__dict__)   # {'vehicle': 'BMW'} , here child attribute prints.
 
+### super() function usage 
 
+
+class computer():
+    def __init__(self):
+        self.ram="4gb"
+        self.storage="54gb"
+        print("this computer constructor")
+
+class mobile(computer):
+    def __init__(self):
+        super().__init__()      #  to access values from parent 
+        self.model="iphone x"
+        print("this mobile constructor")
+
+mob=mobile()
+print(mob.__dict__)
+
+
+#### with given variable ra , str.....
+
+class computer():
+    def __init__(self,ra,str):
+        self.ram=ra
+        self.storage=str
+        print("this computer constructor")
+
+class mobile(computer):
+    def __init__(self,ra,str):
+        super().__init__(ra,str)
+        self.model="iphone x"
+        print("this mobile constructor")
+
+mob=mobile("4gb","5gb")
+print(mob.__dict__)    # this computer constructor
+                       # this mobile constructor
+                       # {'ram': '4gb', 'storage': '5gb', 'model': 'iphone x'}
 
 
 
