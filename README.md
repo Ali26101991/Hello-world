@@ -236,7 +236,21 @@ e2=Employee(40000,33)
 
 Employee.get_company_name() #  company name is  infosys
 
+# class method second example
 
+class Student():
+    college_name="RYMEC"
+    def __init__(self,nam,mar):
+        self.name=nam
+        self.marks=mar
+    @classmethod
+    def getcollege_name(cls):
+        print(f"college name is :{cls.college_name}") ()     # class method 
+
+std1=Student("rahul",80)
+std2=Student("akhil",90)
+print(Student.college_name)  # to access class variable.
+Student.getcollege_name()   #   class method.
 
 
 
