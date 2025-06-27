@@ -308,6 +308,37 @@ print(m1.bonus)  # 1000
 m1.show()  #  this is other function
 e1.display()  # this is parent class
 
+# constructor in inheritance :
+
+class Father:
+    def __init__(self):
+        print("this father class")
+        self.vehicle="scooter"
+
+class Son(Father):
+    pass
+
+
+s1=Son()
+print(s1.__dict__)   # {'vehicle': 'scooter'}  # child class can access parent attributes
+
+
+###########
+
+class Father:
+    def __init__(self):
+        print("this father class")
+        self.vehicle="scooter"
+
+class Son(Father):
+    def __init__(self):
+        print("this is child class")
+        self.vehicle="BMW"
+
+
+s1=Son()
+print(s1.__dict__)   # {'vehicle': 'BMW'} , here child attribute prints.
+
 
 
 
