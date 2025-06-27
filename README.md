@@ -245,7 +245,8 @@ class Student():
         self.marks=mar
     @classmethod
     def getcollege_name(cls):
-        print(f"college name is :{cls.college_name}") ()     # class method 
+     cls.college_name="BIT" #  modifying varaible 
+     print(f"college name is :{cls.college_name}")     # class method 
 
 std1=Student("rahul",80)
 std2=Student("akhil",90)
