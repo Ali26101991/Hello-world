@@ -217,7 +217,10 @@ e1=Employee(20000,44)
 e2=Employee(45000,46)
 print(Employee.company_name) #  Qualcomm
 Employee.company_name="tcs"  # modify class variable.
-print(Employee.company_name)
+print(Employee.company_name)  # tcs
+
+
+
 
 
 
