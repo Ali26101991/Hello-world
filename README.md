@@ -289,7 +289,24 @@ n=int(input("enter the number of years : "))
 
 Bank.simp_int(prin,n)   #  external variables prin and n
 
+####### inheritance -- deriving a new class from an existing class so that new class inherits all members (attributes +method) of existing  class is called inheritance.  ##
 
+class Employee:
+    bonus=1000
+    def display(self):
+        print("this is parent class")
+
+class Manager(Employee):  # child class
+    bonus1=2000
+    def show(self):
+        print("this is other function")
+e1=Employee()
+m1=Manager()
+print(e1.bonus) # 1000
+print(m1.bonus1) #  2000
+print(m1.bonus)  # 1000
+m1.show()  #  this is other function
+e1.display()  # this is parent class
 
 
 
