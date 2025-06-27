@@ -273,8 +273,21 @@ print(e2.name)       # ashok
 e2.getname()      #  the name is : ashok
 e1.getname()      # the name is : ajay
 
+# static method  --perform operations on external data
 
+class Bank():
+    Bank_name="sbi"     #class variable
+    rate_of_int=12.2    # class variable
 
+    @staticmethod
+    def simp_int(prin,n):
+        si=(prin*n*Bank.rate_of_int)/100
+        print("simple interest is " ,si)
+
+prin=float(input("enter the principle amount:")) 
+n=int(input("enter the number of years : "))
+
+Bank.simp_int(prin,n)   #  external variables prin and n
 
 
 
