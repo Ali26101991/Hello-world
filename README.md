@@ -253,6 +253,32 @@ std2=Student("akhil",90)
 print(Student.college_name)  # to access class variable.
 Student.getcollege_name()   #   class method.
 
+# using setter method and getter method.
+
+class Employee():
+    def setname(self,nm):
+        self.name=nm
+
+    def getname(self):
+        print("the name is :",self.name)
+
+e1=Employee()
+e2=Employee()
+e1.setname("ajay")   # setting name ajay
+e2.setname("ashok")   # setting name ashok
+print(e1.__dict__)    #  {'name': 'ajay'}
+print(e2.__dict__)    #  {'name': 'ashok'}
+print(e1.name)       #  ajay
+print(e2.name)       # ashok
+e2.getname()      #  the name is : ashok
+e1.getname()      # the name is : ajay
+
+
+
+
+
+
+
 
 
 
