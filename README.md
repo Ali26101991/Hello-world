@@ -397,6 +397,32 @@ class Manager(Employee):    # grand child class
 
 m1=Manager()
 
+# Hierarchichal inheritance :
+
+class Person():
+    def __init__(self,nm,ag):
+        self.name=nm
+        self.age=ag
+
+class Employee(Person):
+    def __init__(self,nm,ag,sa):
+        super().__init__(nm,ag)
+        self.salary=sa
+
+class Student(Person):
+    def __init__(self,nm,ag,ma):
+        super().__init__(nm,ag)
+        self.marks=ma
+
+s1=Student("ajay",40,400)
+
+e1=Employee("veeru",20,4400)
+print(e1.name)  # veeru
+print(e1.age)    # 20
+print(s1.name)    # ajay 
+print(s1.age)     # 40
+print(s1.marks)   # 400
+
 
 
 
