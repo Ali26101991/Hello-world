@@ -378,6 +378,26 @@ print(mob.__dict__)    # this computer constructor
                        # {'ram': '4gb', 'storage': '5gb', 'model': 'iphone x'}
 
 
+# multilevel inheritance:
+
+class human_being(object):    # parent class
+    def __init__(self):
+        print("human constructor called")
+        self.name=input("enter the name")
+
+class Employee(human_being):  # child class
+    def __init__(self):
+        print("employee constructor called")
+        self.salary=int(input("enter salary"))
+
+class Manager(Employee):    # grand child class
+    def __init__(self):
+        print("Manager constructor called")
+        self.bonus=float(input("enter the bonus :"))
+
+m1=Manager()
+
+
 
 
 
