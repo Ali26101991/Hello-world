@@ -423,7 +423,35 @@ print(s1.name)    # ajay
 print(s1.age)     # 40
 print(s1.marks)   # 400
 
+# example 
 
+class Person():
+    def __init__(self,nm,ag):
+        self.name=nm
+        self.age=ag
+    def display(self):
+        print("this is person")
+
+class Employee(Person):
+    def __init__(self,nm,ag,sa):
+        super().__init__(nm,ag)
+        self.salary=sa
+    def display2(self):
+        print("this is employee ")
+
+class Student(Person):
+    def __init__(self,nm,ag,ma):
+        super().__init__(nm,ag)
+        self.marks=ma
+    def display3(self):
+        print("this is student")
+
+s1=Student("ajay",40,400)
+
+e1=Employee("veeru",20,4400)
+
+s1.display() # this is person
+s1.display2()  # show error
 
 
 
