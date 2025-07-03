@@ -578,6 +578,19 @@ class Finance:
 f1=Finance()
 print(f1.__dict__)  # {'_Finance__revenue': 10000, '_Finance__num_emp': 145}
 
+# we can access  private data as below.
+
+class Finance:
+    def __init__(self):
+        self.__revenue=10000
+        self.__num_emp=145
+
+
+
+f1=Finance()
+
+print(f1._Finance__revenue) # 10000
+
 
 
 
