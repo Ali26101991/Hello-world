@@ -483,6 +483,27 @@ class District(State,Country):
 d1=District()
 print(d1.__dict__) # {'office': 'Mumbai'}
 
+##  super function usage :
+
+class Country:
+    def __init__(self):
+        print("hello country")
+        self.office="delhi"
+class State:
+    def __init__(self):
+        super().__init__()
+        print("hello state")
+        self.office="mumbai"
+class District(State,Country):
+    def __init__(self):
+        super().__init__()
+        print("hello district")
+
+        self.office="gulbarga"
+
+d1=District()
+print(d1.__dict__)   
+
 
 
 
