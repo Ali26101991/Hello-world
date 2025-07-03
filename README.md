@@ -453,6 +453,20 @@ e1=Employee("veeru",20,4400)
 s1.display() # this is person
 s1.display2()  # show error
 
+# multiple inheritance :  two parent class
+
+class Country:
+    office="delhi"
+
+class State:
+    office="mumbai"
+
+class District(State,Country):  # two parent class
+    pass
+
+d1=District()
+print(d1.office)
+
 
 
 
