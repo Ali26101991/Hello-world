@@ -566,6 +566,18 @@ class Finance:
 f1=Finance()
 f1.display()
 
+# name mangaling ( _classname__variablename : value )
+
+class Finance:
+    def __init__(self):
+        self.__revenue=10000
+        self.__num_emp=145
+
+
+
+f1=Finance()
+print(f1.__dict__)  # {'_Finance__revenue': 10000, '_Finance__num_emp': 145}
+
 
 
 
