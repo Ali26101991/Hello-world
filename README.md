@@ -84,6 +84,30 @@ c1=Cart(["pant","shirt","hoodi"],["tv","mob"],["chair"])
 print(len(c1))    # 6 
 
 
+#  Polymorphism in Functions and Objects
+
+class BMW:
+    def max_speed(self):
+        print("speed is 300")
+    def fuel_type(self):
+        print("this diesel")
+
+class VW:
+    def max_speed(self):
+        print("speed is 200")
+
+    def fuel_type(self):
+        print("this petrol")
+def Car(obj):
+    obj.max_speed()
+    obj.fuel_type()
+
+B1=BMW()
+V1=VW()  
+Car(B1)  # speed is 300  , this diesel
+Car(V1)  # speed is 200 , this petrol
+
+
 
 
 
