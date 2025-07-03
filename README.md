@@ -465,8 +465,23 @@ class District(State,Country):  # two parent class
     pass
 
 d1=District()
-print(d1.office)
+print(d1.office)  # mumbai
 
+# example with constructor
+
+class Country:
+    def __init__(self):
+        self.office="delhi"
+
+class State:
+    def __init__(self):
+        self.office="Mumbai"
+
+class District(State,Country):
+  pass
+
+d1=District()
+print(d1.__dict__) # {'office': 'Mumbai'}
 
 
 
