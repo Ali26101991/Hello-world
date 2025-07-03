@@ -8,3 +8,37 @@ for i in reversed(str):
 
 for i in reversed(list1):
     print(i)        # it will reverse character in string.
+
+# Polymorphism with inheritance :
+
+class Veh:
+    def __init__(self,name,color,price):
+        self.name=name
+        self.color=color
+        self.price=price
+
+    def get_details(self):
+        print("name is ",self.name)
+        print("color is ",self.color)
+        print("price is ",self.price)
+
+    def max_speed(self):
+        print("the max speed is 100")
+
+    def gear(self):
+        print("the number of gear are 6 ")
+
+class Car(Veh):
+    def max_speed(self):
+        print("the max speed is 140")
+
+    def gear(self):
+        print("the number of gears are 7")
+
+
+v1=Veh("ford","while",100000)  
+v1.get_details() 
+c1=Car("toyota","red",200000) 
+c1.get_details()
+v1.max_speed()  # 
+c1.max_speed()
