@@ -60,7 +60,28 @@ class Cart:
 c1=Cart()
 print(c1)   # hello world
 
+# overiding len() function 
 
+class Cart:
+    def __init__(self,bask1,bask2,bask3):
+        self.clothes=bask1
+        self.electronics=bask2
+        self.others=bask3
+    
+c1=Cart(["pant","shirt","hoodi"],["tv","mob"],["chair"])
+print(len(c1))  # error
+
+##  after defining len() function.
+class Cart:
+    def __init__(self,bask1,bask2,bask3):
+        self.clothes=bask1
+        self.electronics=bask2
+        self.others=bask3
+    def __len__(self):
+        return len(self.clothes)+len(self.electronics)+len(self.others)
+
+c1=Cart(["pant","shirt","hoodi"],["tv","mob"],["chair"])
+print(len(c1))    # 6 
 
 
 
