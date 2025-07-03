@@ -521,6 +521,23 @@ class P(X,Y):
 
 print(P.mro())  # PXAYBCO
 
+##  ENCAPSULATION  :  Private data 
+
+class Finance:
+    def __init__(self):
+        self.__revenue=10000  # __ using become private
+        self.no_of_sale=112
+
+class Hr:
+    def __init__(self):
+        self.num_of_emp=32
+        print(f1.__revenue)   # cannot access here
+
+
+f1=Finance()
+h1=Hr()
+print(f1.__dict__)
+
 
 
 
