@@ -551,6 +551,21 @@ class Finance:
 f1=Finance()
 f1.display()
 
+# we can modify private data using below method
+
+class Finance:
+    def __init__(self):
+        self.__revenue=10000
+        self.__num_emp=145
+    def display(self):
+        print(f"the revenue is {self.__revenue} and number of employees are {self.__num_emp}")
+        self.__revenue=122334
+        print(f"the revenue is {self.__revenue} and number of employees are {self.__num_emp}")
+
+
+f1=Finance()
+f1.display()
+
 
 
 
