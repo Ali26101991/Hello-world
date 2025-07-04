@@ -142,6 +142,22 @@ print(Book.__add__(b1,b2))
 print(b1)
 print(b1.__dict__)
 
+# operator over writting.
+
+class Hotel:
+    def __init__(self,name,fare):
+        self.name=name
+        self.fare=fare
+
+    def __gt__(self,other):   # overiding value
+        return self.fare>other.fare
+
+h1=Hotel("taj",20000)
+h2=Hotel("pvr",10000)
+
+print(h1>h2)  # Hotel.__gt__(h1,h2)
+print(Hotel.__gt__(h1,h2))
+
 
 
 
