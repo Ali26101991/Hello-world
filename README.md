@@ -125,7 +125,22 @@ print(dir(str))
 
 print("hellow"+20)  # throw type error
 
+# adding functions to user defined classes
 
+class Book():
+    def __init__(self,title,pages):
+        self.title=title
+        self.pages=pages
+    def __add__(b1,b2):  #  adding add function
+        return b1.pages+b2.pages
+
+b1=Book("the lucky man",300)
+b2=Book("the power",200)
+
+print(b1+b2)  ##  Book.__add__(b1,b2)
+print(Book.__add__(b1,b2))
+print(b1)
+print(b1.__dict__)
 
 
 
