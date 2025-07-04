@@ -108,6 +108,23 @@ Car(B1)  # speed is 300  , this diesel
 Car(V1)  # speed is 200 , this petrol
 
 
+# Using int data types
+num1=20
+num2=30
+print(num1+num2)  # adding using variables
+print(num1.__add__(num2))  # first method
+print(int.__add__(num1,num2))  # second method
+
+# using string data type
+str1="maheboob"
+str2="ali"
+print(str1+str2) # normal method
+print(str1.__add__(str2))  # we can write this as well
+print(str.__add__(str1,str2)) # we can write this as wel.
+print(dir(str))
+
+print("hellow"+20)  # throw type error
+
 
 
 
