@@ -142,6 +142,26 @@ print(Book.__add__(b1,b2))
 print(b1)
 print(b1.__dict__)
 
+
+############ adding b3 objecct 
+
+class Book:
+    def __init__(self,title,pages):
+        self.title=title
+        self.pages=pages
+
+    def __add__(self,other):
+        total=self.pages+other.pages
+        return Book("all books",total)
+
+    def __str__(self):
+        return str(self.pages)
+
+b1=Book("hello world",300)
+b2=Book("magic number",200)
+b3=Book("many fires",450)
+print("the total pages are :",b1+b2+b3)
+
 # operator over writting.
 
 class Hotel:
@@ -157,6 +177,8 @@ h2=Hotel("pvr",10000)
 
 print(h1>h2)  # Hotel.__gt__(h1,h2)
 print(Hotel.__gt__(h1,h2))
+
+################################
 
 
 
