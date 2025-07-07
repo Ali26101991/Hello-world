@@ -179,7 +179,17 @@ print(h1>h2)  # Hotel.__gt__(h1,h2)
 print(Hotel.__gt__(h1,h2))
 
 ################################
+# Method overloading : 
 
+class addition:
+    def add(self,num1,num2):  # shows type error
+        print("addition of two number is ",num+num2)
+
+    def add(self,num1,num2,num3): # last defined method will execute always
+        print("addition of three num is ",num1+num2+num3)
+
+a=addition()
+a.add(4,6,4)   # addition of three num is  14
 
 
 
