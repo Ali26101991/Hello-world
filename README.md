@@ -191,6 +191,20 @@ class addition:
 a=addition()
 a.add(4,6,4)   # addition of three num is  14
 
+#  Method overloading using None , it will execute given arguments without error.
+
+class Calci:
+    def add(self,num1=None,num2=None,num3=None):
+      if num1!=None and num2!=None and num3!=None:
+          print("addition is : ",num1+num2+num3)
+      elif num1!=None and num2!=None:
+          print("addition is :",num1+num2)
+      else:
+          print("numbers are incorrect")
+c1=Calci()
+c1.add(4,5)  # addition is : 9
+c1.add(4,5,6)  # addition is :  15
+
 
 
 
