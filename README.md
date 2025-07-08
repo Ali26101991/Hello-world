@@ -205,7 +205,17 @@ c1=Calci()
 c1.add(4,5)  # addition is : 9
 c1.add(4,5,6)  # addition is :  15
 
+# in this example last defined method will execute 
+class Area:
+    def Size(self,l):
+        print("the area of square is",l*l)
 
+    def Size(self,l,b):
+        print("the area of ractangle is ",l*b)
+
+a1=Area()
+a1.Size(2)  # Error
+a1.Size(2,4)  # the area of ractangle is  8
 
 
 
