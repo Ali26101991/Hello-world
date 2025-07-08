@@ -217,7 +217,19 @@ a1=Area()
 a1.Size(2)  # Error
 a1.Size(2,4)  # the area of ractangle is  8
 
+# to avoid eror 
 
+class Area:
+    def Size(self,l=0,b=0):
+        if l>0 and b>0:
+         print("the area of ractangle is",l*b)
+        elif l>0 and b==0:
+         print("the area of square is",l*l)
+
+
+
+a1=Area()
+a1.Size(4,3)
 
 
 
