@@ -43,6 +43,31 @@ e1=employee("ajay",40)
 e1.display()
 del e1  #  destructor is called before deleting varialble.
 
+###  creating multiple objects of Movie class :
+
+class Movie(object):
+    def __init__(self,title,min,hero):
+        self.title=title
+        self.runtime=min
+        self.hero=hero
+
+    def printer(self):
+        print(f"title is : {self.title}\nruntime is {self.runtime}\nand hero is :{self.hero}")
+list_movies=[]
+while True:
+        title=input("enter the movie titlel : ")
+        min=input("enter the movie run time :")
+        hero=input("enter the hero name :")
+        obj=Movie(title,min,hero)
+        list_movies.append(obj)
+        print("movie added into list")
+        ans=input("Do you want to add other movie name(y/n)")
+        if ans!="y":
+            break
+print("all movies information")
+for obj in list_movies:
+    obj.printer()
+
 
 
 
