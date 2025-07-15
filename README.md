@@ -68,6 +68,10 @@ print("all movies information")
 for obj in list_movies:
     obj.printer()
 
+# two types of decorators :  
+* Function Decorator
+* Class decorator
+
 
 
 
