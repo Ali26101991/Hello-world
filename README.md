@@ -43,7 +43,7 @@ e1=employee("ajay",40)
 e1.display()
 del e1  #  destructor is called before deleting varialble.
 
-###  creating multiple objects of Movie class :
+###  creating multiple objects of Movie class : ( storing objs in list )
 
 class Movie(object):
     def __init__(self,title,min,hero):
