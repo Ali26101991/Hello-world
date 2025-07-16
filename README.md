@@ -68,9 +68,74 @@ print("all movies information")
 for obj in list_movies:
     obj.printer()
 
-# two types of decorators :  
-* Function Decorator
-* Class decorator
+# circular referencing 
+
+import time
+
+class Employee:
+    def __init__(self,obj2):
+        self.obj2=obj2
+    def __del__(self):
+        print("employee class destructor called")
+
+class Account:
+    def __init__(self,num):
+        self.account_num=num
+        self.obj1=Employee(self)
+    def __del__(self):
+        print("account class destructor called")
+
+ac=Account(1234)
+del ac
+time.sleep(5)
+
+* callable() is a built in function :**
+* syntax :  callable ( python object )
+* It returns boolean value
+* if object is callable it return true
+* if object is not callable it return False
+
+# what are callable object in python ?
+1) Objects which can be called whenver required
+2) objects having __call__() method in their class
+
+Note : Classes and Function are callable objects in python. 
+
+x=100
+print(callable(x)) # False
+###########################################
+def add(a,b):
+    return a+b
+
+add(4,6)
+print(callable(add)) # True
+
+# Types of Decorators
+Function decorator.
+Class decorator.
+
+
+class Decorator(object):
+    def __init__(self,func):
+        self.fucntion=func
+    def __call__(self,a,b):
+        result=self.fucntion(a,b)
+        return result**2
+
+@Decorator
+def add(a,b):
+    return a+b
+
+#add=Decorator(add)
+print(add(4,5))   # 81
+
+
+
+
+
+
+
+
 
 
 
