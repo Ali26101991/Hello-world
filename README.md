@@ -159,7 +159,42 @@ print(add(10,20,30))
 print(add(10,"20",30))
 #add=Decorator(add)
 
+#   @property decorator 
 
+# @property decorator is built in decorator
+
+# it will treat methods as attribute
+# example  instead of e.mail() we can call it e.mail
+
+class Employee:
+    def __init__(self,first,last):
+        self.firstname=first
+        self.lastname=last
+        #self.mail=first+last+"@gmail.com"
+
+    @property
+    def mail(self):
+        return f'{self.firstname}{self.lastname}@gmail.com'
+
+    @property
+    def fullname(self):
+        return f'{self.firstname} {self.lastname}'
+
+e=Employee("Rahul","Khanna")
+e1=Employee("salman","khan")
+e2=Employee("Manoj","parge")
+
+e.firstname="anil"
+print(e.firstname)
+print(e.lastname)
+print(e.mail)    # # we can skip e.mail()
+print(e.fullname)  # we can skip e.fullname()
+print("********************")
+print(e1.firstname)
+print(e1.lastname)
+print(e1.mail)
+print(e1.fullname) # we can skip e1.fullname()
+print("********************")
 
 
 
