@@ -196,8 +196,10 @@ print(e1.mail)
 print(e1.fullname) # we can skip e1.fullname()
 print("********************")
 
+# what is abstraction ?
+The process by which data and functions are defined in such way that only essential details can be seen and unneccessary implimentations are hidden is called data abstraction.  
 
-
+Hiding complex implementations details and showing only signetures to users.
 
 
 
