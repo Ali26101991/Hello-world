@@ -136,7 +136,42 @@ except:
     print(sys.exc_info()[0])  # prints Exception name class
     print(sys.exc_info()[1])  # prints Exception info 
 
+# Exception handling using function method.
 
+Example 1. 
+
+import sys
+def div(a,b):
+    x=a/b
+    print(x2)
+
+try:
+    div(6,2)
+except:
+    print(sys.exc_info()[0])
+    print(sys.exc_info()[1])
+
+Example 2. 
+
+def div(a,b):
+    x=a/b
+    print(x)
+
+try:
+    div(6,0)
+except Exception as obj:
+    print(obj)
+
+Example 3.
+
+def div(a,b):
+    x=a/b
+    print(x)
+
+try:
+    div(6,0)
+except ZeroDivisionError:
+    print("can not divided by zero")
 
 
 
