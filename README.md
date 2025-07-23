@@ -173,6 +173,36 @@ try:
 except ZeroDivisionError:
     print("can not divided by zero")
 
+# raise an exception :
+
+syntax :  raise exceptionName("error message")
+
+# Normal method : 
+
+age=int(input("enter the age "))
+
+try:
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    print("age is ", age)
+
+except ValueError as obj:
+    print(obj)
+    
+# using function  :
+
+def set(age):
+
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    print("age is ", age)
+
+try:
+    set(-5)
+
+except ValueError as obj:
+    print(obj)
+
 
 
 
