@@ -121,9 +121,20 @@ except Exception as obj:
     print(obj.__class__)
     print(obj)
 
+# Printing Exception name and Exception info by (import sys)
+# 
 
 
+import sys
+num1=int(input("enter first number :"))
+num2=int(input("enter second number :"))
 
+try:
+    div=num1/num
+    print("division is :",div)
+except:
+    print(sys.exc_info()[0])  # prints Exception name class
+    print(sys.exc_info()[1])  # prints Exception info 
 
 
 
