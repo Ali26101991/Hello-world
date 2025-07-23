@@ -82,6 +82,20 @@ try:
 except:
     print("something went wrong")
 
+# use of else and finally block in program 
+
+num1=int(input("enter first number: "))
+num2=int(input("enter second number :"))
+try:
+    div=num1/num2
+    print(div)
+except:
+    print("something went wrong")  # it will execute if exception occur.
+else:
+    print("exception did'nt occur")  # it will execute if no exception
+finally:
+    print("always executed")  # it will execute always 
+
 
 
 
