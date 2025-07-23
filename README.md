@@ -98,6 +98,36 @@ else:
 finally:
     print("always executed")  # it will execute always 
 
+# Exception class example : ( NameError)
+
+num1=int(input("enter the first number :"))
+num2=int(input("enter the second number :"))
+try:
+    div=num1/num
+    print("division is ",div)
+
+except Exception as obj:  # NameError exception 
+    print(obj.__class__)  # prints NameError class 
+    print(obj)   #  it will exception information.
+
+# Exception class example : ( Zero devision error )
+num1=int(input("enter the first number :"))   # 10
+num2=int(input("enter the second number :"))  # 0
+try:
+    div=num1/num2
+    print("division is ",div)
+
+except Exception as obj:
+    print(obj.__class__)
+    print(obj)
+
+
+
+
+
+
+
+
 
 
 
