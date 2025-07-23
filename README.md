@@ -83,6 +83,8 @@ except:
     print("something went wrong")
 
 # use of else and finally block in program 
+# Note : else and finally blocks are optional
+# Note : For one try block there will be multiple except blocks
 
 num1=int(input("enter first number: "))
 num2=int(input("enter second number :"))
