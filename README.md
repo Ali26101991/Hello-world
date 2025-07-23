@@ -48,8 +48,39 @@ except ZeroDivisionError:
 
 print("rest of code")
 
+# handling multiple exceptions:
 
+num1=int(input("enter first number :"))
+num2=int(input("enter second number"))
 
+try:
+    div=num1/num2
+    print(di)
+except ZeroDivisionError:    
+    print("can not devided by zero")
+except NameError:
+    print("varialbe name is wrong")
+
+# to print exact exception from output window 
+
+num1=int(input("enter first number :"))
+num2=int(input("enter second number :"))
+
+try:
+    div=num1/num2
+    print(di)
+except (ZeroDivisionError,NameError) as obj:
+    print(obj)
+
+# common print message for all exception 
+
+num1=int(input("enter first number: "))
+num2=int(input("enter second number :"))
+try:
+    div=num1/num2  # if num2 0 , ZeroDivisionError
+    print(di)  # NameError
+except:
+    print("something went wrong")
 
 
 
