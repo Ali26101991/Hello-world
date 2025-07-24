@@ -202,7 +202,39 @@ try:
 
 except ValueError as obj:
     print(obj)
+    
+# User defined Exception :  
+# writing program for FiveDivisionError.
 
+class FiveDivisionError(Exception):
+    pass
+
+try:
+    n1=int(input("enter the first number : "))
+    n2=int(input("enter the second number : "))
+    if n2==5:
+        raise FiveDivisionError("can not divided by five")
+    x=n1/n2
+    print("the division is :",x)
+
+except (FiveDivisionError,ZeroDivisionError) as obj:
+    print(obj)
+
+# write program to to check withdraw amount :
+
+class  insufficient_fund(Exception):
+    pass
+main=10000
+
+try:
+    amount=int(input("enter withdrawl amount :"))
+    if amount > main:
+        raise insufficient_fund("you can not withdraw amount")
+    main-=amount
+    print("the balance is :",main)
+
+except insufficient_fund as obj:
+    print(obj)
 
 
 
