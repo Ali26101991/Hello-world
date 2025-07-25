@@ -25,3 +25,19 @@ def Display():
     print(1+"ali")
 Display()
 
+## additional code :
+
+import sys
+def format_traceback(exc_type,exc_value,exc_traceback):
+    print("something went wrong")
+    print(exc_type)
+    print(exc_value)
+    print(exc_traceback)
+sys.excepthook=format_traceback
+
+def Display():
+    print(1+"ali")
+Display()
+
+
+
