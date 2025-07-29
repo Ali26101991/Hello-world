@@ -47,3 +47,40 @@ def withdraw():
 
 withdraw()
 
+
+# example of exception with recursion :
+
+def square():
+    try:
+        n=int(input("enter the number :"))
+        print("square is :",n**2)
+
+    except Exception as e:
+        print(e)
+        square()
+
+square()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
