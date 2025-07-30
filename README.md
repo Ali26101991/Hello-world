@@ -236,6 +236,56 @@ try:
 except insufficient_fund as obj:
     print(obj)
 
+# calculator example :
 
+class OperationError(Exception):
+    pass
+class OperatorError(Exception):
+    pass
+
+def calculator():
+    operations=('+','-','*','/')
+    user_input=input("enter the operation :")
+    element=user_input.split()
+    try:
+        if len[element]!=3:
+            raise OperationError("enter two operand with operator seperated by spaces")
+        operator=element[1]
+        if operator not in operations:
+            raise OperatorError(f"{operator} is not valide,enter it form {operations}")
+        num1=float(element[0])
+        num2=float(element[2])
+        if operator=='/' and num2==0:
+            raise ZeroDivisionError("can not divided by zero")
+           
+        
+    except Exception as e:
+        print(e)
+        print("Try again")
+        calculator()
+    else:
+        if operator=='+':
+            result= num1 + num2
+        
+        elif operator=='-':
+            result= num1-num2
+        
+        elif operator=='*':
+            result= num1 * num2
+        
+        elif operator=='/':
+            result = num1/num2
+        
+        
+    finally:
+        return f"{num1} {operator} {num2} = {results}"
+    
+result=calculator()
+print(result)
+        
+        
+        
+        
+        
 
 
