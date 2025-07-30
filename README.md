@@ -248,7 +248,7 @@ def calculator():
     user_input=input("enter the operation :")
     element=user_input.split()
     try:
-        if len[element]!=3:
+        if len(element)!=3:
             raise OperationError("enter two operand with operator seperated by spaces")
         operator=element[1]
         if operator not in operations:
@@ -278,7 +278,7 @@ def calculator():
         
         
     finally:
-        return f"{num1} {operator} {num2} = {results}"
+        return f"{num1} {operator} {num2} = {result}"
     
 result=calculator()
 print(result)
