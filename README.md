@@ -88,6 +88,19 @@ t1=Thread(target=display,kwargs={'n':4,"msg":"hello"})# passing single arg
 # 4) Start created thread using start() method.
 t1.start()
 
+# working of main thread and t1 thread in below program
+
+from threading import Thread
+def display(n,msg): 
+    for i in range(n):
+        print(msg)
+t1=Thread(target=display,kwargs={'n':4,"msg":"hello"})
+t1.start()
+# below code is executed by main thread and above executed by t1 thread. so we have two threads here.
+for i in range(4):
+    print("welcome")
+
+
 
 
 
