@@ -46,6 +46,20 @@ t1=Thread(target=display)
 # 4) Start created thread using start() method.
 t1.start()
 
+# by passing arguments :
+
+# 1) import Thread class form threading module
+from threading import Thread
+
+# 2) Create a function containing code to be executed parralley
+def display(n,msg): # passing arguments
+    for i in range(n):
+        print(msg)
+# 3) Create an object of Thread class
+t1=Thread(target=display,args=(4,"hello")) # passing argu
+# 4) Start created thread using start() method.
+t1.start()
+
 
 
 
