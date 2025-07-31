@@ -100,6 +100,21 @@ t1.start()
 for i in range(4):
     print("welcome")
 
+# to know the current thread details :
+
+from threading import Thread,current_thread
+def display(n,msg): 
+    print(current_thread()) # <Thread(Thread-1 (display), started 135932260628160)> 
+    print(current_thread().name)# Thread-1 (display)
+    print(current_thread().ident) # 135932260628160
+    for i in range(n):
+        print(msg)
+t1=Thread(target=display,kwargs={'n':4,"msg":"hello"})
+t1.start()
+for i in range(4):
+    print("welcome")
+
+
 
 
 
