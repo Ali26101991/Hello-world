@@ -60,6 +60,21 @@ t1=Thread(target=display,args=(4,"hello")) # passing argu
 # 4) Start created thread using start() method.
 t1.start()
 
+# passing single argument :
+
+# 1) import Thread class form threading module
+from threading import Thread
+
+# 2) Create a function containing code to be executed parralley
+def display(n): # passing single arguments
+    for i in range(n):
+        print("hello")
+# 3) Create an object of Thread class
+t1=Thread(target=display,args=(6,)) # passing single arg
+# 4) Start created thread using start() method.
+t1.start()
+
+
 
 
 
