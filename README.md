@@ -23,3 +23,35 @@ print(threading.current_thread().ident) #132391897009024
 print(threading.current_thread())#<_MainThread(MainThread, started 132391897009024)>
 print(threading.current_thread().is_alive())# True
 
+# there are two ways to create threads
+i) Using Thread class present in threading module.
+ii) By extending Thread class.
+
+Steps to create thread by i) method
+1) import Thread class form threading module
+2) Create a function containing code to be executed parralley
+3) Create an object of Thread class
+4) Start created thread using start() method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
