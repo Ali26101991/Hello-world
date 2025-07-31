@@ -33,6 +33,20 @@ Steps to create thread by i) method
 3) Create an object of Thread class
 4) Start created thread using start() method.
 
+# example :
+# 1) import Thread class form threading module
+from threading import Thread
+
+# 2) Create a function containing code to be executed parralley
+def display():
+    for i in range(4):
+        print("hello")
+# 3) Create an object of Thread class
+t1=Thread(target=display)
+# 4) Start created thread using start() method.
+t1.start()
+
+
 
 
 
