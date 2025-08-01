@@ -128,7 +128,21 @@ t1=Thread(target=e1.display())  #  way to call method ( t1 thread)
 for i in range(5):  ( here it is mainthread)
     print("welcome")
 
+##################################################################
+# accessing using class directy by @classmethod 
 
+from threading import Thread
+
+class example:
+    @classmethod   # use of @class method
+    def display(self):
+        for i in range(4):
+            print("VT1300")
+e1=example()
+t1=Thread(target=example.display()) # target using class name
+            
+for i in range(5):
+    print("welcome")
 
 
 
