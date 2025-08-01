@@ -185,6 +185,30 @@ for i in range(4):
     print("checking copyrights")
     sleep(4)
 
+#######################################################
+# use constructor in class :
+
+from time import sleep
+from threading import Thread
+
+videos=["all is well","all in one","one nation"]
+
+class myclass(Thread):
+    def __init__(self):   # adding constructor.
+        print("constrcutor called")
+        Thread.__init__(self)  # must call this constructor 
+    def run(self):
+        for vid in videos:
+            print(f"{vid} started uploading")
+            sleep(3)
+            print(f"{vid} uploaded successufully ")
+t1=myclass()
+t1.start()
+
+for i in range(4):
+    print("checking copyrights")
+    sleep(4)
+
 
 
 
