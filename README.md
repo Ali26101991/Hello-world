@@ -234,7 +234,34 @@ t1.start()
 for i in range(4):
     print("checking copyrights")
     sleep(4)
+###############################################################
 
+from time import sleep
+from threading import Thread
+
+videos=["all is well","all in one","one nation"]
+
+class myclass(Thread):
+    def __init__(self,val):
+        self.kid=val
+        print("constrcutor called")
+        Thread.__init__(self)
+    def compressor(self):   # we can add method
+        print("video compressed")
+    def run(self):
+        self.compressor()  # call to method here
+        if self.kid:
+            print("video is suitable")
+        for vid in videos:
+            print(f"{vid} started uploading")
+            sleep(3)
+            print(f"{vid} uploaded successufully ")
+t1=myclass(True)
+t1.start()
+
+for i in range(4):
+    print("checking copyrights")
+    sleep(4)
 
 
 
