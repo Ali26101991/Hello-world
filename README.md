@@ -113,6 +113,20 @@ t1=Thread(target=display,kwargs={'n':4,"msg":"hello"})
 t1.start()
 for i in range(4):
     print("welcome")
+    
+# accessing class method using thread
+
+from threading import Thread  # importing module
+
+class example:
+    def display(self):  # instance method
+        for i in range(4):
+            print("VT1300")
+e1=example()          #  create object of class example
+t1=Thread(target=e1.display())  #  way to call method ( t1 thread)
+            
+for i in range(5):  ( here it is mainthread)
+    print("welcome")
 
 
 
