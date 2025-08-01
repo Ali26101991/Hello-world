@@ -209,7 +209,31 @@ for i in range(4):
     print("checking copyrights")
     sleep(4)
 
+#############################################################
 
+from time import sleep
+from threading import Thread
+
+videos=["all is well","all in one","one nation"]
+
+class myclass(Thread):
+    def __init__(self,val):
+        self.kid=val    # adding instance variable to check suitable for kids
+        print("constrcutor called")
+        Thread.__init__(self)
+    def run(self):
+        if self.kid:
+            print("video is suitable")
+        for vid in videos:
+            print(f"{vid} started uploading")
+            sleep(3)
+            print(f"{vid} uploaded successufully ")
+t1=myclass(True)  # if True it prints message ,if False it will not print
+t1.start() 
+
+for i in range(4):
+    print("checking copyrights")
+    sleep(4)
 
 
 
