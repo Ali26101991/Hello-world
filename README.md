@@ -45,6 +45,12 @@ def display():
 t1=Thread(target=display)
 # 4) Start created thread using start() method.
 t1.start()
+##################################################
+what happens when t1.start() exeucuted , interpreter call to below method
+threading module:-
+class Thread
+   def run(self):
+      display()
 
 # by passing arguments :
 
@@ -139,12 +145,45 @@ class example:
         for i in range(4):
             print("VT1300")
 e1=example()
-t1=Thread(target=example.display()) # target using class name
+t1=Thread(target=example.display()) # target using class name,you can give e1 as well.
             
 for i in range(5):
     print("welcome")
+########################################################
+# using @staticmethod 
 
+from threading import Thread
 
+class example:
+    @staticmethod   # using @staticmethod
+    def display(n):
+        for i in range(n):
+            print("VT1300")
+e1=example()
+t1=Thread(target=example.display(4,))
+            
+for i in range(5):
+    print("welcome")
+########################################################
+# ii) By extending Thread class. ( create thread )
+
+from time import sleep
+from threading import Thread
+
+videos=["all is well","all in one","one nation"]
+
+class myclass(Thread):
+    def run(self):
+        for vid in videos:
+            print(f"{vid} started uploading")
+            sleep(3)
+            print(f"{vid} uploaded successufully ")
+t1=myclass()
+t1.start()
+
+for i in range(4):
+    print("checking copyrights")
+    sleep(4)
 
 
 
