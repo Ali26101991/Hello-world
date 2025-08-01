@@ -263,7 +263,25 @@ for i in range(4):
     print("checking copyrights")
     sleep(4)
 
+##################################################
+Thread name :  example :  Thread-1 ,Thread-2
+Name of thread is stored in 'name' attribute of thread object.
+# printing name of thread.
+from threading import Thread
 
+def display():
+    for i in range(4):
+        print("hello")
+def show():
+    for i in range(5):
+        print("world")
+        
+t1=Thread(target=display)
+t2=Thread(target=show)
+t1.start()
+t2.start()
+print(t1.name) # prints thread name
+print(t2.name) # prints thread name
 
 
 
