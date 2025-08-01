@@ -326,6 +326,29 @@ ii) Native Identifier :-
 * Identifier for your process (program)
 * os module  :- getpid()
 
+  # printing Thread identifier , native identifier and PID in below progarm
+
+  from threading import Thread
+import os
+
+def display():
+    for i in range(4):
+        print("hello")
+        
+def show():
+    for i in range(5):
+        print("bye")
+        
+t1=Thread(target=display)
+t2=Thread(target=show)
+t1.start()
+t2.start()
+print(t1.ident) # prints identifier
+#print(t2.ident) # print identifier
+print(t1.native_id) # prints native id
+#print(t2.native_id)
+print(os.getpid()) # prints PID number
+
 
 
 
