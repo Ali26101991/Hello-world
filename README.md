@@ -306,7 +306,25 @@ print(current_thread().name)
 current_thread().name="malik" # we can change name of thread
 print(current_thread().name)
 
+# Thread Identifier :
+i) Thread Identifier
+ii) Native Identifier
 
+i) Thread Identifier :-
+* Each thread has unique identifier(id) with a python process
+* assigned by the python interpreter
+* read only positive intiger and unique in process
+* assigned after starting the thread
+* This identifier is stored in instance varialble 'ident'
+
+ii) Native Identifier :-
+* Each thread has unique identifier assigned by operating system.
+* property name: native_id (assigned after thread has started )
+* Generally ident and native_id are same.
+
+# PID
+* Identifier for your process (program)
+* os module  :- getpid()
 
 
 
