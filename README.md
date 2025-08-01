@@ -283,6 +283,29 @@ t2.start()
 print(t1.name) # prints thread name
 print(t2.name) # prints thread name
 
+########## changing name of the thread :
+
+from threading import Thread,current_thread
+
+def display():
+    for i in range(4):
+        print("hello")
+def show():
+    for i in range(5):
+        print("world")
+        
+t1=Thread(target=display)
+t2=Thread(target=show)
+t1.start()
+t2.start()
+t1.name='newname' # we can change name of thread
+print(t1.name)   
+t2.name='uniquename' # we can change name of thread
+print(t2.name) 
+print(current_thread().name)
+current_thread().name="malik" # we can change name of thread
+print(current_thread().name)
+
 
 
 
