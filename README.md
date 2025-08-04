@@ -396,9 +396,9 @@ def show():
 t1=Thread(target=display)
 t2=Thread(target=show)
 t1.start()
-t1.join()
+t1.join() # t1 will execute completely then t2 and main thread.
 t2.start()
-t2.join()
+t2.join() # t2 will execute completely next main thread will execute
 
 for i in range(4):
     print("kiwi")
