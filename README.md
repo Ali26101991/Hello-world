@@ -349,7 +349,33 @@ print(t1.native_id) # prints native id
 #print(t2.native_id)
 print(os.getpid()) # prints PID number
 
+# Built in function in Multithreading
+* is_alive() :- checks thread running or not
+* main_thread() :- it returns the main thread details
+* active_count() :- Number of running thread
+* enumerate() :-  list of all running thread.
+* get_native_id() :- gives native id of thread.
 
+# Example :
+
+from threading import Thread,active_count,enumerate,get_native_id,main_thread
+
+def display():
+    print(enumerate()) # give the list of running thread (t1 and main thread )
+    print(main_thread()) # prints main thread.
+    for i in range(2):
+        print("hello")
+
+def show():
+    for i in range(2):
+        print("world")
+        
+t1=Thread(target=display)
+print(t1.is_alive()) # before -- True
+t1.start()
+print(active_count()) # t1 and mainthread
+print(t1.is_alive())  # After -- Start
+print(get_native_id()) # prints native id
 
 
 
