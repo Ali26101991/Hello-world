@@ -377,7 +377,31 @@ print(active_count()) # t1 and mainthread
 print(t1.is_alive())  # After -- Start
 print(get_native_id()) # prints native id
 
+#  join()  function
 
+if thread wants to wait for other thread then we need to go for join() method
+
+# example :
+
+from threading import Thread
+
+def display():
+    for i in range(4):
+        print('hello')
+        
+def show():
+    for i in range(3):
+        print('VT-1300')
+        
+t1=Thread(target=display)
+t2=Thread(target=show)
+t1.start()
+t1.join()
+t2.start()
+t2.join()
+
+for i in range(4):
+    print("kiwi")
 
 
 
