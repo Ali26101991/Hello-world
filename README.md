@@ -424,7 +424,25 @@ t1.start()
 t2.start()
 t1.join()
 t2.join()
-print("total time taken :",time.time()-begin) # prints time taken to execute above threads
+print("total time taken :",time.time()-begin) # prints time taken to execute above threads ( 1 sec)
+
+# without threading method , using only function take more time apporx = 2 sec
+
+import time
+
+def square(num):
+    print("finding square.....")
+    time.sleep(1)
+    print(f"the square of {num} is ", num**2)
+    
+def cube(num):
+    print("finding cube.......")
+    time.sleep(1)
+    print(f"the cub of {num} is :",num**3)
+begin=time.time()
+square(4)
+cube(3)
+print("total time taken :",time.time()-begin)  # 2 sec
 
 
 
