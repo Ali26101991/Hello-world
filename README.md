@@ -403,6 +403,32 @@ t2.join() # t2 will execute completely next main thread will execute
 for i in range(4):
     print("kiwi")
 
+# efficiency of threading system
+
+from threading import Thread
+import time
+
+def square(num):
+    print("finding square.....")
+    time.sleep(1)
+    print(f"the square of {num} is ", num**2)
+    
+def cube(num):
+    print("finding cube.......")
+    time.sleep(1)
+    print(f"the cub of {num} is :",num**3)
+begin=time.time()  #  starting of system to till now , return seconds
+t1=Thread(target=square,args=(4,))
+t2=Thread(target=cube,args=(3,))
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print("total time taken :",time.time()-begin) # prints time taken to execute above threads
+
+
+
+
 
 
 
