@@ -539,6 +539,33 @@ t2=Thread(target=task,args=(mylock,"bye"))
 t1.start()
 t2.start()
 
+# Bus ticket example with acquire() and release()
+
+from threading import *
+lock=Lock()
+class Bus():
+    def __init__(self,name,available_seat,l1):
+        self.available_seat=available_seat
+        self.l1=l1
+    
+    def reserv(self,need_seat):
+        self.l1.acquire()
+        print("available seat are ",self.available_seat)
+        if need_seat<=self.available_seat:
+            nm=current_thread().name
+            print(f"{need_seat} are alocated to {nm}")
+            self.available_seat-=need_seat
+        else:
+            print("sorry seats are not available")
+        self.l1.release()
+    
+
+b1=Bus("orange travel",3,lock)
+t1=Thread(target=b1.reserv,args=(1,),name="ajay")
+t2=Thread(target=b1.reserv,args=(1,),name="ashok")
+t1.start()
+t2.start()
+
 
 
 
