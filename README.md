@@ -479,8 +479,19 @@ t1.start()
 t2.start()
 
 # what is race condition ?
-It is a bug generated when we do multiprocessing
-    
+It is a bug generated when we do multiprocessing. It occures because of two or more thread tried to update the same varialble
+and results into unreliable output.
+
+concurrent accesses to shared resources can lead to race condition.
+
+* Thread syncronization technique ( to fix race condition )
+
+  a common approach to protect critical section of the code ( prevent concurrent access )
+
+* following three thread synconization techniques
+  1) Using Locks
+  2) Using R-Lock
+  3) Using Semaphores
 
 
 
