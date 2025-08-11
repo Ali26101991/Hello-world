@@ -477,6 +477,9 @@ t1=Thread(target=b1.reserv,args=(1,),name="ajay")
 t2=Thread(target=b1.reserv,args=(1,),name="ashok")
 t1.start()
 t2.start()
+
+# what is race condition ?
+It is a bug generated when we do multiprocessing
     
 
 
