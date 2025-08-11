@@ -444,6 +444,40 @@ square(4)
 cube(3)
 print("total time taken :",time.time()-begin)  # 2 sec
 
+# Race condition :-  A bug in cuncurrency program.
+
+Example 01 :
+var=value
+t1(adder thread) : add the value
+t2(subtractor thread): subtract the value
+Above both threads are exeucuted simultaneously , we expect some inprecident output.
+
+Example 02:
+In below example available_seats are accessed by both the thread simultaneiously so output is not proper.
+
+# example 02 :
+# Bus ticketing system
+from threading import *
+class Bus:
+    def __init__(self,name,available_seats):
+        self.available_seats=available_seats
+        
+    def reserv(self,need_seat):
+        print("available seats are :",self.available_seats)
+        if need_seat<=self.available_seats:
+            nm=current_thread().name
+            #code
+            print(f"{need_seat} are allocated to {nm}")
+            self.available_seats-=need_seat
+        else:
+            print("seats are not available")
+        
+b1=Bus("orange travel",2)
+t1=Thread(target=b1.reserv,args=(1,),name="ajay")
+t2=Thread(target=b1.reserv,args=(1,),name="ashok")
+t1.start()
+t2.start()
+    
 
 
 
