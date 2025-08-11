@@ -485,6 +485,7 @@ and results into unreliable output.
 concurrent accesses to shared resources can lead to race condition.
 
 * Thread syncronization technique ( to fix race condition )
+It is defined as a mechanism which ensures that two or more threads do not simulantaneosly executes some perticular program section known as critical section.
 
   a common approach to protect critical section of the code ( prevent concurrent access )
 
@@ -492,6 +493,63 @@ concurrent accesses to shared resources can lead to race condition.
   1) Using Locks
   2) Using R-Lock
   3) Using Semaphores
+ 
+* Locks in Python
+
+ > Threading modules provide lock class to deal with race condition
+
+* Lock has to states
+  > Locked : The lock has been acquired by one thread and any thread that makes to attempts acqure it must wait until it relased
+  > Unlocked : The lock has not been acquired and can be acquired by the next thread that makes an attempt.
+  
+Stept 1: Create an object of Lock Class
+  syntax:-
+   from threading import *
+   mylock=Lock()
+   
+Step 2 : Acquire lock using acquire()
+  syntax :-
+   mylock.acquire()
+
+Step 3 : Release lock using release() 
+  syntax :-
+   mylock.release()
+
+# acquire()  :
+* change the state of code to locked.
+* other threads have to wait until lock is released by current working thread
+  syntax :-
+  lock_object.acquire([blocking=True,timeout=-1]) # timeout -- operation need to complete in this time.
+
+# example 
+
+from threading import *
+from time import sleep
+mylock=Lock()
+
+def task(mylock,msg):
+    mylock.acquire()  # use default values only ( blocking and timeout )
+    for i in range(4):
+        print(msg)
+    sleep(3)
+    mylock.release()
+        
+t1=Thread(target=task,args=(mylock,"hello"))
+t2=Thread(target=task,args=(mylock,"bye"))
+t1.start()
+t2.start()
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
